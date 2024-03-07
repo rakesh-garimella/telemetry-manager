@@ -56,6 +56,7 @@ function check_telemetry_manager_is_ready() {
       echo "Telemetry  manager running successfully!"
       return
     else
+      kubectl get pods -n kyma-system
       echo "Istio Telemetry creation failed. Retrying in $DELAY_SECONDS seconds..."
       sleep $DELAY_SECONDS
     fi
