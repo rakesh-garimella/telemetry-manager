@@ -30,6 +30,9 @@ GARDENER_K8S_VERSION_FULL=$(shell kubectl --kubeconfig=${GARDENER_SA_PATH} get c
 GARDENER_OS_VERSION=$(shell kubectl --kubeconfig=${GARDENER_SA_PATH} get cloudprofiles.core.gardener.cloud gcp -o go-template='{{range .spec.machineImages}}{{if eq .name "gardenlinux"}}{{range .versions}}{{if eq .classification "supported"}}{{.version}}{{end}}{{end}}{{end}}{{end}}')
 endif
 
+.PHONY: test-gardener-cluster-name
+	echo ${GARDENER_CLUSTER_NAME}
+
 .PHONY: provision-gardener
 provision-gardener: kyma ## Provision gardener cluster with latest k8s version
 	${KYMA} provision gardener gcp --credentials ${GARDENER_SA_PATH} --name ${GARDENER_CLUSTER_NAME} --project ${GARDENER_PROJECT} --secret ${GARDENER_SECRET_NAME} --kube-version ${GARDENER_K8S_VERSION_FULL} --gardenlinux-version ${GARDENER_OS_VERSION} --hibernation-start="00 ${HIBERNATION_HOUR} * * ?"
