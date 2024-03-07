@@ -31,6 +31,7 @@ GARDENER_OS_VERSION=$(shell kubectl --kubeconfig=${GARDENER_SA_PATH} get cloudpr
 endif
 
 .PHONY: test-gardener-cluster-name
+test-gardener-cluster-name:
 	echo ${GARDENER_CLUSTER_NAME}
 
 .PHONY: provision-gardener
