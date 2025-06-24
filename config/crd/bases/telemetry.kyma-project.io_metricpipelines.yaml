@@ -248,7 +248,7 @@ spec:
                     description: Defines an output using the OpenTelemetry protocol.
                     properties:
                       authentication:
-                        description: Defines authentication options for the OTLP output
+                        description: Defines authentication options for the OTLP output.
                         properties:
                           basic:
                             description: Activates `Basic` authentication for the destination providing relevant Secrets.

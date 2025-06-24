@@ -42,7 +42,7 @@ type OTLPOutput struct {
 	Endpoint ValueType `json:"endpoint"`
 	// Defines OTLP export URL path (only for the HTTP protocol). This value overrides auto-appended paths `/v1/metrics` and `/v1/traces`
 	Path string `json:"path,omitempty"`
-	// Defines authentication options for the OTLP output
+	// Defines authentication options for the OTLP output.
 	Authentication *AuthenticationOptions `json:"authentication,omitempty"`
 	// Defines custom headers to be added to outgoing HTTP or GRPC requests.
 	Headers []Header `json:"headers,omitempty"`

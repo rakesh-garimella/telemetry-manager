@@ -156,7 +156,7 @@ For details, see the [LogPipeline specification file](https://github.com/kyma-pr
 | **output.&#x200b;http.&#x200b;user.&#x200b;valueFrom.&#x200b;secretKeyRef.&#x200b;name** (required) | string | The name of the Secret containing the referenced value. |
 | **output.&#x200b;http.&#x200b;user.&#x200b;valueFrom.&#x200b;secretKeyRef.&#x200b;namespace** (required) | string | The name of the namespace containing the Secret with the referenced value. |
 | **output.&#x200b;otlp**  | object | Defines an output using the OpenTelemetry protocol. |
-| **output.&#x200b;otlp.&#x200b;authentication**  | object | Defines authentication options for the OTLP output |
+| **output.&#x200b;otlp.&#x200b;authentication**  | object | Defines authentication options for the OTLP output. |
 | **output.&#x200b;otlp.&#x200b;authentication.&#x200b;basic**  | object | Activates `Basic` authentication for the destination providing relevant Secrets. |
 | **output.&#x200b;otlp.&#x200b;authentication.&#x200b;basic.&#x200b;password** (required) | object | Contains the basic auth password or a Secret reference. |
 | **output.&#x200b;otlp.&#x200b;authentication.&#x200b;basic.&#x200b;password.&#x200b;value**  | string | The value as plain text. |
